@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mathias Lentoft</title>
+	<meta name="description" content="Official Portfolio for Mathias Lentoft">
+	<meta name="keywords" content="official,portfolio,for,mathias,lentoft,official portfolio for mathias lentoft,mathias,lentoft,carpenter,carpentry,wood,design,cabinetmaker">
+	<meta name="author" content="Mads Lentoft, Mathias Lentoft">
+	<meta http-equiv="Content-Type" content="text/html; UTF-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<link rel="stylesheet" type="text/css" href="https:fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+	<link rel="icon" type="image/png" href="./css/img/logo/logo3.png">
+	<script src="./js/jquery.js"></script>
+	<script src="./js/scripts.js"></script>
+</head>
+<body onload="hashrefresh();">
+	<div class="page-wrap">
+		<div class="logo"><img src="./css/img/logo/logo3.png" height="100px"/></div>
+		<div class="navigation">
+			<ul>
+				<li class="nav-home"><a href="#home">Home</a></li>
+				<li class="nav-about"><a href="#about">About</a></li>
+				<li class="nav-contact"><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="page" id="home">
+				<div class="margin">
+					<input type="hidden" id="chosencategory" value="0"></input>
+					<div id="categories"></div>
+				</div>
+			</div>
+			<div class="page" id="about">
+				<div class="section">
+					<img style="height:240px;width:240px;border-radius:50%;" src="./css/img/profil.jpg"/>
+				</div>
+				<div class="section">
+					<h2 class="about">About me</h2>
+					<p class="about">
+						Graduated Cabinetmaker in 2015 and granted the Medal Honor from the Queen of Denmark.<br>
+						I design and create my own line of furniture, as well as custom pieces.<br>
+						My design is deeply rooted in traditional Danish craftsmanship.<br>
+						Every piece is handmade in Copenhagen.
+					</p>
+				</div>
+			</div>
+			<div class="page" id="contact">
+				<div class="section">
+					<div id="mail-icon">
+						<img src="./css/img/mail.gif" width="80px">
+					</div>
+					<h2 class="about">Contact me</h2>
+					<p class="about">
+						If you have any questions or requests, feel free to write a message to me.
+					</p>
+					<div class="contact-container">
+						<form method="post" action="sendmail.php">
+							<fieldset id="formplusreply">
+							<label for="email">Your Email: <div class="tooltip">?<span class="tooltiptext">Your email will be used to reply to your message</span></div>
+							<input class="text" id="email" name="email" type="text" size="30" placeholder="example@example.com">
+							</label>
+							<label for="name">Name:
+							<input class="text" id="name" name="name" type="text" size="30" placeholder="John Doe">
+							</label>
+							<label style="display:none;" for="subject">Subject:
+							<input class="text" id="subject" name="subject" type="text" size="30" value="Portfolio Contact Form"><!-- Select on focus onclick="this.select();"-->
+							</label>
+							<label for="message">Message:
+							<textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..."></textarea>
+							</label>
+							<input name="catchbot" class="botcatch" type="text" value="">
+							<label class="submit" for="submit">
+							<input class="button" id="submit" type="submit" value="Send">
+							</label>
+							<label class="reset" for="reset">
+							<input class="button" id="reset" type="reset" value="Reset" onclick="return confirm('Are you sure that you want to reset your message?');">
+							</label>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div class="copyright">&#169; Mathias Lentoft</div>
+		<div class="links">
+			<ul class="social">
+				<li><a href="#about"><img height="24px" src="./css/img/social/facebook.png" class="facebook"/></a></li>
+				<li><a href="#about"><img height="24px" src="./css/img/social/flickr.png" class="flickr"/></a></li>
+				<li><a href="#about"><img height="24px" src="./css/img/social/twitter.png" class="twitter"/></a></li>
+				<li><a href="#about"><img height="24px" src="./css/img/social/pinterest.png" class="pinterest"/></a></li>
+			</ul>
+		</div>
+	</footer>
+	<div id="cover-bg" onclick="hideImg();"></div>
+	<div id="cover-img-container">
+		<div id="cover-close" onclick="hideImg();"></div>
+		<div id="img">
+			<img src="">
+			<div id="img-description"></div>
+		</div>
+		<div id="img-related"></div>
+	</div>
+	<div id="cover" style="position:fixed;width:100%;height:100%;background:#FFF;left:0;top:0;"></div>
+</body>
+</html>
